@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .one {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+      }
+      .overlay {
+        width: 100%;
+        height: 100vh;
+        /* height will be equal to screen height */
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        /* display: none; */
+      }
+      .box {
+        width: 50%;
+        height: 40vh;
+        background-color: white;
+        /* basic of getting box at centre */
+        margin-top: 20vh;
+        margin-left: 25%;
+        position: relative;
+      }
+      .closing {
+        line-height: 12px;
+        width: 18px;
+        font-size: 8pt;
+        font-family: tahoma;
+        margin-top: 1px;
+        margin-right: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay" id="popup">
+      <div class="box">
+        <button class="closing" id="closepop">&cross;</button>
+      </div>
+    </div>
+    <button id="login">Login</button>
+    <div class="one" id="one">
+      <ul>
+        <li>thor</li>
+        <li>im</li>
+        <li>hulk</li>
+        <li>sw</li>
+      </ul>
+    </div>
+    <button id="btn">click</button>
+    <br />
+    <img
+      id="image"
+      width="200px"
+      src="https://images.pexels.com/photos/11175774/pexels-photo-11175774.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+      alt="img of light "
+    />
+
+    <script>
+      document.getElementById("btn").addEventListener("click", addcontent);
+      function addcontent() {
+        console.log("hello world");
+        //putting content
+        // document.getElementById("one").innerHTML = "Hello World";
+        //html element can be put in double quote
+        //fetch content in html (present already)
+        // console.log(document.getElementById("one").innerHTML);
+        //manipulate css by increasing width
+        // document.getElementById("one").style.width = "500px";
+        // document.getElementById("one").style.height = "500px";
+        // document.getElementById("one").style.backgroundColor = "lightblue";
+      }
+      document.getElementById("image").addEventListener("click", changeimage);
+      function changeimage() {
+        document
+          .getElementById("image")
+          .setAttribute(
+            "src",
+            "https://images.pexels.com/photos/17896743/pexels-photo-17896743/free-photo-of-eye-in-the-sky.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+          );
+      }
+      document.getElementById("login").addEventListener("click", showpop);
+      function showpop() {
+        document.getElementById("popup").style.display = "block";
+      }
+      document.getElementById("closepop").addEventListener("click", hidepop);
+      function hidepop() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
