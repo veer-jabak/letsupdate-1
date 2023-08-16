@@ -1,0 +1,62 @@
+1)
+
+//switch case js 
+var name = "veer";
+var type;
+
+switch (name) {
+  case "divij":
+    type = "name is divij";
+    break;
+  case "banana":
+    type = "name is veer.";
+    break;
+  default:
+    type = "Unknown fruit.";
+}
+
+console.log(fruitType);
+
+
+2)
+
+
+// Function to calculate percentage
+function calculatePercentage(marks) {
+  var totalMarks = 500; // Assuming total marks are 500 for simplicity
+  return (marks / totalMarks) * 100;
+}
+
+// Function to assign a grade based on percentage
+function assignGrade(percentage) {
+  if (percentage >= 90) {
+    return "A";
+  } else if (percentage >= 80) {
+    return "B";
+  } else if (percentage >= 70) {
+    return "C";
+  } else if (percentage >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+
+
+var mark1 = 85;
+var mark2 = 70;
+var mark3 = 95;
+var mark4 = 60;
+var mark5 = 99;
+
+
+var totalMarks = mark1 + mark2 + mark3 + mark4 + mark5;
+var percentage = calculatePercentage(totalMarks);
+
+
+var grade = assignGrade(percentage);
+
+
+console.log("Total Marks: " + totalMarks);
+console.log("Percentage: " + percentage.toFixed(2) + "%");
+console.log("Grade: " + grade);
